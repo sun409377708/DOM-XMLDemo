@@ -8,8 +8,12 @@
 
 #import "ViewController.h"
 #import <GDataXMLNode.h>
+#import "Video.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 
 @end
 
@@ -18,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //https://raw.githubusercontent.com/sun409377708/DOM-XMLDemo/master/Practice.xml
+    _dataArray = [NSMutableArray array];
     
     NSString *urlString = @"https://raw.githubusercontent.com/sun409377708/DOM-XMLDemo/master/Practice.xml";
     
@@ -36,15 +40,25 @@
         GDataXMLDocument *document = [[GDataXMLDocument alloc] initWithData:data error:NULL];
         
         for (GDataXMLElement *element in document.rootElement.children) {
-//            NSLog(@"%@", element.children);
+            
+            // 2. 创建模型
+            Video *video = [[Video alloc] init];
             
             for (GDataXMLNode *node in element.children) {
-                NSLog(@"%@ -- %@", node.name, node.stringValue);
+                
+                [video setValue:node.stringValue forKey:node.name];
             }
+            
+            for (GDataXMLNode *node in element.attributes) {
+                [video setValue:node.stringValue forKey:node.name];
+                [_dataArray addObject:video];
+            }
+            
         }
-        
+        NSLog(@"%@", _dataArray);
         
     }] resume];
+    
 }
 
 @end

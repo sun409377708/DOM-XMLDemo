@@ -13,9 +13,11 @@
 		771CE2451DB7078B00F743DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771CE2431DB7078B00F743DA /* Main.storyboard */; };
 		771CE2471DB7078B00F743DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771CE2461DB7078B00F743DA /* Assets.xcassets */; };
 		771CE24A1DB7078B00F743DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771CE2481DB7078B00F743DA /* LaunchScreen.storyboard */; };
+		B4B5922E7D46A45842B8EE8F /* libPods-GDataDOMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22515987B112C2257DBAB2CB /* libPods-GDataDOMDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22515987B112C2257DBAB2CB /* libPods-GDataDOMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GDataDOMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		771CE2371DB7078A00F743DA /* GDataDOMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDataDOMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		771CE23B1DB7078B00F743DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		771CE23D1DB7078B00F743DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		771CE2461DB7078B00F743DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		771CE2491DB7078B00F743DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		771CE24B1DB7078B00F743DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF549CC175BDA9239641E4D /* Pods-GDataDOMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDataDOMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDataDOMDemo/Pods-GDataDOMDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DFD36C3AE990D619E37E1324 /* Pods-GDataDOMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDataDOMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDataDOMDemo/Pods-GDataDOMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4B5922E7D46A45842B8EE8F /* libPods-GDataDOMDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				771CE2391DB7078B00F743DA /* GDataDOMDemo */,
 				771CE2381DB7078A00F743DA /* Products */,
+				9D464F27D9CF5316AE5ECDCF /* Pods */,
+				7C055C3C03D3378509E1814D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7C055C3C03D3378509E1814D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22515987B112C2257DBAB2CB /* libPods-GDataDOMDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D464F27D9CF5316AE5ECDCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFD36C3AE990D619E37E1324 /* Pods-GDataDOMDemo.debug.xcconfig */,
+				AFF549CC175BDA9239641E4D /* Pods-GDataDOMDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 771CE24E1DB7078B00F743DA /* Build configuration list for PBXNativeTarget "GDataDOMDemo" */;
 			buildPhases = (
+				6410F2F67EF8AB91E449BFAF /* [CP] Check Pods Manifest.lock */,
 				771CE2331DB7078A00F743DA /* Sources */,
 				771CE2341DB7078A00F743DA /* Frameworks */,
 				771CE2351DB7078A00F743DA /* Resources */,
+				EE6E5A6ED6A9EE1902DFF7CE /* [CP] Embed Pods Frameworks */,
+				03B69FFF3532EA589ACE7DB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03B69FFF3532EA589ACE7DB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDataDOMDemo/Pods-GDataDOMDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6410F2F67EF8AB91E449BFAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE6E5A6ED6A9EE1902DFF7CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GDataDOMDemo/Pods-GDataDOMDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		771CE2331DB7078A00F743DA /* Sources */ = {
@@ -262,6 +337,7 @@
 		};
 		771CE24F1DB7078B00F743DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFD36C3AE990D619E37E1324 /* Pods-GDataDOMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GDataDOMDemo/Info.plist;
@@ -273,6 +349,7 @@
 		};
 		771CE2501DB7078B00F743DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF549CC175BDA9239641E4D /* Pods-GDataDOMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GDataDOMDemo/Info.plist;
@@ -301,6 +378,7 @@
 				771CE2501DB7078B00F743DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

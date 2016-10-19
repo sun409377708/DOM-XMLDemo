@@ -51,9 +51,9 @@
             
             for (GDataXMLNode *node in element.attributes) {
                 [video setValue:node.stringValue forKey:node.name];
-                [_dataArray addObject:video];
             }
-            
+            [_dataArray addObject:video];
+
         }
         NSLog(@"%@", _dataArray);
         

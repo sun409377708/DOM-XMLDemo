@@ -13,6 +13,8 @@
 		771CE2451DB7078B00F743DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771CE2431DB7078B00F743DA /* Main.storyboard */; };
 		771CE2471DB7078B00F743DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771CE2461DB7078B00F743DA /* Assets.xcassets */; };
 		771CE24A1DB7078B00F743DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771CE2481DB7078B00F743DA /* LaunchScreen.storyboard */; };
+		771CE2531DB70B7D00F743DA /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 771CE2521DB70B7D00F743DA /* NSArray+Log.m */; };
+		771CE2571DB70CC500F743DA /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 771CE2561DB70CC500F743DA /* Video.m */; };
 		B4B5922E7D46A45842B8EE8F /* libPods-GDataDOMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22515987B112C2257DBAB2CB /* libPods-GDataDOMDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,10 @@
 		771CE2461DB7078B00F743DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		771CE2491DB7078B00F743DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		771CE24B1DB7078B00F743DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		771CE2511DB70B7D00F743DA /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		771CE2521DB70B7D00F743DA /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		771CE2551DB70CC500F743DA /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		771CE2561DB70CC500F743DA /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		AFF549CC175BDA9239641E4D /* Pods-GDataDOMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDataDOMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GDataDOMDemo/Pods-GDataDOMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DFD36C3AE990D619E37E1324 /* Pods-GDataDOMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GDataDOMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GDataDOMDemo/Pods-GDataDOMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +79,7 @@
 				771CE2461DB7078B00F743DA /* Assets.xcassets */,
 				771CE2481DB7078B00F743DA /* LaunchScreen.storyboard */,
 				771CE24B1DB7078B00F743DA /* Info.plist */,
+				771CE2541DB70CC500F743DA /* Model */,
 				771CE23A1DB7078B00F743DA /* Supporting Files */,
 			);
 			path = GDataDOMDemo;
@@ -81,9 +88,20 @@
 		771CE23A1DB7078B00F743DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				771CE2511DB70B7D00F743DA /* NSArray+Log.h */,
+				771CE2521DB70B7D00F743DA /* NSArray+Log.m */,
 				771CE23B1DB7078B00F743DA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		771CE2541DB70CC500F743DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				771CE2551DB70CC500F743DA /* Video.h */,
+				771CE2561DB70CC500F743DA /* Video.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7C055C3C03D3378509E1814D /* Frameworks */ = {
@@ -226,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				771CE2421DB7078B00F743DA /* ViewController.m in Sources */,
+				771CE2531DB70B7D00F743DA /* NSArray+Log.m in Sources */,
 				771CE23F1DB7078B00F743DA /* AppDelegate.m in Sources */,
+				771CE2571DB70CC500F743DA /* Video.m in Sources */,
 				771CE23C1DB7078B00F743DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
